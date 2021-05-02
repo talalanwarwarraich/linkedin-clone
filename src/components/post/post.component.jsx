@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Avatar } from "@material-ui/core";
 import InputOption from "../feed/input-option/input-option.component";
 import "./post.styles.scss";
@@ -8,9 +9,9 @@ import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/user-slice";
 
-function Post({ name, description, message, photoUrl }) {
+const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
 	return (
-		<div className="post">
+		<div ref={ref} className="post">
 			{/*post avatar and info */}
 			<div className="post-header">
 				<Avatar src={photoUrl}>{name[0]}</Avatar>
@@ -32,6 +33,6 @@ function Post({ name, description, message, photoUrl }) {
 			</div>
 		</div>
 	);
-}
+});
 
 export default Post;

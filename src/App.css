@@ -19,4 +19,8 @@ body {
 .body {
 	display: flex;
 	width: 98%;
+	margin-top: 35px;
+	max-width: 1200px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
