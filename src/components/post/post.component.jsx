@@ -5,13 +5,15 @@ import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/user-slice";
 
 function Post({ name, description, message, photoUrl }) {
 	return (
 		<div className="post">
 			{/*post avatar and info */}
 			<div className="post-header">
-				<Avatar />
+				<Avatar src={photoUrl}>{name[0]}</Avatar>
 				<div className="post-info">
 					<h2>{name}</h2>
 					<p>{description}</p>
