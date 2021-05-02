@@ -32,7 +32,7 @@ function Header() {
 				</div>
 			</div>
 			<div className="header-right">
-				<HeaderOption Icon={HomeIcon} title="Home" />
+				<HeaderOption active={true} Icon={HomeIcon} title="Home" />
 				<HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
 				<HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
 				<HeaderOption Icon={ChatIcon} title="Messages" />

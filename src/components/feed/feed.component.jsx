@@ -74,23 +74,27 @@ function Feed() {
 				</div>
 			</div>
 			{/* posts container */}
-			<FlipMove>
-				{posts.map(
-					({
-						id,
-						data: { name, description, message, photoUrl, timestamp },
-					}) => (
-						<Post
-							key={id}
-							name={name}
-							description={description}
-							message={message}
-							photoUrl={photoUrl}
-							timestamp={timestamp}
-						/>
-					)
-				)}
-			</FlipMove>
+			{posts.length > 0 ? (
+				<FlipMove>
+					{posts.map(
+						({
+							id,
+							data: { name, description, message, photoUrl, timestamp },
+						}) => (
+							<Post
+								key={id}
+								name={name}
+								description={description}
+								message={message}
+								photoUrl={photoUrl}
+								timestamp={timestamp}
+							/>
+						)
+					)}
+				</FlipMove>
+			) : (
+				<p className="no-posts">No posts</p>
+			)}
 		</div>
 	);
 }
